@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+  @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+        :root{
+            --white: #fff;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+        .container{
+            display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background-image: url("https://www.teahub.io/photos/full/1-14054_aesthetic-desktop-wallpaper-aesthetic-pc-wallpapers-hd.jpg");
+        background-position: center;
+        background-size: cover;
+        }
+        .form-container{
+            width: 380px;
+            height: 400px;
+            background-color: transparent;
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            border: 2px solid var(--white);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+          
+
+            
+        }
+        h1{
+            position: absolute;
+            color: var(--white);
+            display: inline-block;
+             top: 10%;
+        }
+        .input-container{
+            /* background-color: aqua; */
+            position: relative;
+            width: 80%;
+            height: 10%;
+            border-bottom: 2px solid var(--white);
+            margin-bottom: 20px;
+        }
+       .absolute{
+        position: absolute;
+       }
+       .icon{
+        right: 10px;
+        top: 20%;
+        color: var(--white);
+        font-size: 1.3rem;
+       }
+       .input-input{
+        background: transparent;
+        font: 20px;
+        width: 90%;
+        height: 100%;
+        top: 10px;
+        bottom: 10px;
+        border: none;
+        outline: none;
+        color: var(--white);
+        transition-duration: 0.5s;
+        
+       }
+       
+       .label{
+        color: var(--white);
+        font-size: 1.2rem;
+        transition-duration: 0.5s;
+        
+        
+       }
+      input:focus ~ .label{
+        top: -10px;
+        
+        
+      }
+     
+       .line-container{
+        display: flex;
+        color: var(--white);
+        justify-content: space-between;
+        width: 70%;
+       }
+       button{
+        display: inline-block;
+        width: 70%;
+        height: 10%;
+        border-radius: 20px;
+        bottom: 18%;
+        position: absolute;
+        font-size: 1.2rem;
+     
+       }
+       button:hover{
+        background-color: rgb(46, 45, 45);
+        color: #fff;
+        cursor: pointer;
+       }
+       .footer{
+        position: absolute;
+        bottom: 10%;
+        color: var(--white);
+       }
+       .link-register{
+        color: var(--white);
+        text-decoration: underline;
+        font-weight: 600;
+        letter-spacing: 1px;
+
+       }
+       .fp:hover{
+        text-shadow: 1px 1px black;
+        cursor: pointer;
+       }
+       @media  screen and (max-width: 576px) {
+        .form-container{
+            width: 80%;
+        }
+        .footer, .line-container{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            font-size: 14px;
+                      
+        }
+        .footer{
+            bottom:20px;
+        }
+       
+    </style>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+   <div class="container">
+   
+    <div class="form-container">
+              <h1>Log in</h1>
+              <div class="input-container">
+                <input class="input-input absolute" type="text"> 
+                <label class=" label absolute" >Username</label>
+                <ion-icon class="icon absolute" name="mail-open-outline"></ion-icon>
+              </div>
+              <div class="input-container">
+                <input class="input-input absolute" type="password">
+                <label class="label absolute" for="password">Password</label>
+
+                <ion-icon class="icon absolute" name="lock-closed-outline"></ion-icon>
+              </div>
+         <div class="line-container">
+            <div> <input type="checkbox"> <span class="text">Remember Me</span> </div>
+              <div class="fp"> Forgot Password?</div>
+         </div>
+              
+
+              <button> Log in</button>
+
+              <div class="footer">
+                <span>Don't have any account?</span> <a class="link-register fp" href="#"> Register Here</a>
+              </div>
+
+
+
+    </div>
+    
+   </div>
+    
+
+</body>
+</html>
